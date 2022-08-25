@@ -1,0 +1,19 @@
+div(class="jumbotron")
+    h1(style="color:blue;") Ingrese Producto
+    br
+    form(action="/productos" method="post")
+        div(class="form-group")
+            label(for="title")
+                b Nombre:
+            input#apellido.form-control(type="text" name="title")
+        .form-group
+            label(for='price')
+                b Precio:
+            input#apellido.form-control(type='number' name="price" step="0.01")
+        .form-group
+            label(for='thumbnail')
+                b Imagen:
+            input#edad.form-control(type='text' name='thumbnail')
+        button(class="btn btn-success mt-3 mb-3" type="submit") Enviar 
+    a(href="/productos") 
+        button(class="btn btn-secondary mt-3 mb-1") Ver los productos

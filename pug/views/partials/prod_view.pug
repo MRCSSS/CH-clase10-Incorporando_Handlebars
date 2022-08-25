@@ -1,0 +1,20 @@
+div(class="jumbotron")
+    h2(style='color:blue;') Vista de Productos
+    br
+    if DB_CONT.length > 0
+        div(class="table-responsive")
+            table.table.table-dark
+                tr
+                    th Nombre
+                    th Precio
+                    th Imagen
+                each prod in DB_CONT
+                    tr
+                        td=prod.title
+                        td=prod.price
+                        td
+                            img(width="30" src=prod.thumbnail , alt="")
+    else 
+        h3(class="alert alert-warning")='No se encontraron productos'
+    a(href="../") 
+        button(class="btn btn-secondary mt-3 mb-1") Ir a Home
